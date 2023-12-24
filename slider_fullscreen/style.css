@@ -1,0 +1,98 @@
+
+*,*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins";
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+ 
+}
+.slide{
+    overflow: hidden;
+}
+.wrapper,.slide{
+position: relative;
+width: 100%;
+
+height: 100%;
+}
+.slide img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+.slide::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.4);
+
+z-index: 10;
+}
+.slide .image-date{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    z-index: 100;
+}
+.image-date span{
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+
+}
+.image-date h2{
+    font-size: 45px;
+    font-weight: 600;
+    color: #fff;
+}
+.button{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 25px;
+    transition: all 0.3s ease-in-out;
+    color: #000;
+}
+.button:hover{
+    color: #fff;
+    background-color: #Cb7E4F;
+}
+.nav-btn{
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 50%;
+
+}
+.nav-btn::before,
+.nav-btn::after{
+    font-size: 25px;
+    color: #fff;
+}
+.swiper-button-prev {
+    left: 50px;
+}
+
+.swiper-button-next {
+right: 50px;
+}
+
+@media (max-width:768px) {
+    .nav-btn{
+        visibility: hidden;
+    }
+    
+}
