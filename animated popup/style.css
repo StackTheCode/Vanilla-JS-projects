@@ -1,0 +1,98 @@
+*,
+*::before,
+*:after
+{
+    font-family: "Poppins";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    font-family: "Poppins";
+}
+
+section{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #e3f2fd;
+}
+button{padding: 14px 22px;
+    border: none;
+    color: #fff;
+    font-weight: 400;
+    background: #4070f4;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease-in-out;
+
+}
+button:hover{
+    background-color:#265df2 ;
+}
+button.show_modal,
+.modal-box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    
+}
+.modal-box{
+    position: relative;
+    max-width: 380px;
+    padding: 30px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 24px;
+    background-color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform: translate(-50%,50%) scale(1.2);
+}
+
+.image{
+   height: 70px;
+
+}
+.modal-box h2,h3{
+    text-align: center;
+    font-size: 25px;
+    line-height: 140%;
+}
+.buttons{
+    margin-top: 25px;
+}
+.modal-box button{
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 0 10px;
+}
+
+section.active .show_modal{
+    display: none;
+}
+
+section.active .overlay{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+section.active .modal-box{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%,-50%) scale(1);
+}
